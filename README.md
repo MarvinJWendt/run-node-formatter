@@ -48,7 +48,6 @@ jobs:
       uses: MarvinJWendt/run-node-formatter@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 ```
 
 3. Commit the file
