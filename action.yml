@@ -1,11 +1,11 @@
-name: 'Node Code Formatter'
-description: 'Runs `npm run lint` on file change.'
-author: 'MarvinJWendt'
+name: "Node Code Formatter"
+description: "Runs `npm run lint` on file change."
+author: "MarvinJWendt"
 branding:
   icon: award
   color: orange
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "docker"
+  image: "Dockerfile"
   args:
     - ${{ inputs.myInput }}
