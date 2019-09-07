@@ -1,4 +1,4 @@
-name: 'NodeJS code linter'
+name: 'Node Code Linter'
 description: 'Automatically lints your code'
 author: 'MarvinJWendt'
 runs:
