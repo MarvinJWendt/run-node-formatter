@@ -23,4 +23,4 @@ echo "Hello World" >> test.txt
 
 git add *
 git commit -m "Linted code"
-git push
+git push --set-upstream origin master
