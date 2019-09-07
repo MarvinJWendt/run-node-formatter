@@ -4,6 +4,15 @@ set -e
 
 REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
+echo "## Login into git..."
+git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+git config --global user.email "formatter@1337z.ninja"
+git config --global user.name "Node Code Formatter"
+
+echo "## Downloading repo..."
+git fetch
+git checkout $GITHUB_REF
+
 echo "## Your environment is not ready yet. Installing modules..."
 if [ -f yarn.lock ]; then
     yarn --non-interactive --silent --ignore-scripts --production=false
@@ -20,11 +29,6 @@ else
     npm run lint --if-present
     npm run format --if-present
 fi
-
-echo "## Login into git..."
-git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-git config --global user.email "formatter@1337z.ninja"
-git config --global user.name "Node Code Formatter"
 
 echo "## Deleting node_modules..."
 rm -rf node_modules/
