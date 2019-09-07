@@ -38,4 +38,4 @@ git add .
 echo "## Commiting files..."
 git commit -m "Formatted code"
 echo "## Pushing"
-git push -u origin HEAD:refs/heads/HEAD
+git push -u origin $GITHUB_REF
