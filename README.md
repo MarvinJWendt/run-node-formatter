@@ -4,7 +4,7 @@
 
 ## Setup :clipboard:
 
-Simply put your code formatter into a script named `lint` or `format` in your `package.json`.
+Simply put your code formatter into a script named `format` or `lint` in your `package.json` (Yarn only supports a `format` script at the moment).
 
 **Make sure that your code formatter is a dependency of your module!**
 
