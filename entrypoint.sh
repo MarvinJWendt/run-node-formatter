@@ -2,6 +2,8 @@
 
 set -e
 
+REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
+
 echo "## Your environment is not ready yet. Installing modules..."
 if [ -f yarn.lock ]; then
     yarn --non-interactive --silent --ignore-scripts --production=false
@@ -12,6 +14,10 @@ else
     npm install
     npm run lint
 fi
+
+git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+git config --global user.email "action@github.com"
+git config --global user.name "GitHub Action"
 
 git add *
 git commit -m "Linted code"
