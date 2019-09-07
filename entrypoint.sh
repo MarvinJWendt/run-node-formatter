@@ -1,3 +1,5 @@
 #!/bin/sh -l
 
-echo "hello $1"
+npm run lint
+git commit -m "Linted code"
+git push
