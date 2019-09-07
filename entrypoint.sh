@@ -12,14 +12,12 @@ if [ -f yarn.lock ]; then
 else
     NODE_ENV=development 
     npm install
-    # npm run lint
+    npm run lint
 fi
 
 git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-git config --global user.email "action@github.com"
-git config --global user.name "GitHub Action"
-
-echo "Hello World" >> test.txt
+git config --global user.email "linter@1337z.ninja"
+git config --global user.name "Node Code Linter"
 
 git add *
 git commit -m "Linted code"
