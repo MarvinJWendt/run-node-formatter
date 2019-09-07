@@ -15,11 +15,11 @@ jobs:
     name: Node Code Formatter
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Node Code Formatter
-      uses: MarvinJWendt/run-node-formatter@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@master
+      - name: Node Code Formatter
+        uses: MarvinJWendt/run-node-formatter@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 3. Commit the file
