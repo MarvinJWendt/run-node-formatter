@@ -20,6 +20,6 @@ git config --global user.email "linter@1337z.ninja"
 git config --global user.name "Node Code Linter"
 
 git add .
-git reset -- node_modules
+rm -rf node_modules/
 git commit -m "Linted code"
 git push --set-upstream origin master
