@@ -1,5 +1,5 @@
 name: "Node Code Formatter"
-description: "Runs `npm run lint` on file change."
+description: "Runs `npm run format` on file change."
 author: "MarvinJWendt"
 branding:
   icon: award
