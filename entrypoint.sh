@@ -25,8 +25,6 @@ git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_
 git config --global user.email "linter@1337z.ninja"
 git config --global user.name "Node Code Linter"
 
-HEAD_BRANCH=$(jq -r .head.ref)
-
 echo "## Deleting node_modules..."
 rm -rf node_modules/
 echo "## Staging changes..."
@@ -34,4 +32,4 @@ git add .
 echo "## Commiting files..."
 git commit -m "Linted code"
 echo "## Pushing"
-git push --set-upstream origin $HEAD_BRANCH
+git push -u origin HEAD
