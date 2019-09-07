@@ -26,7 +26,7 @@ Simply put your code linter into a script named `lint` in your `package.json`.
   }
 ```
 
-## Usage :octocat:
+## Usage :pencil2:
 
 1. Create an `lint.workflow` file in `.github/`
 2. Paste this code into the file: 
