@@ -1,5 +1,10 @@
 # Node Code Formatter
 
+[![GitHub license](https://img.shields.io/badge/-GitHub_Action-black?logo=github&style=flat-square)](https://github.com/marketplace/actions/node-code-formatter)
+[![GitHub license](https://img.shields.io/github/license/MarvinJWendt/run-node-formatter?style=flat-square)](https://github.com/MarvinJWendt/run-node-formatter/blob/master/LICENSE) 
+[![GitHub issues](https://img.shields.io/github/issues/MarvinJWendt/run-node-formatter)](https://github.com/MarvinJWendt/run-node-formatter/issues)
+[![GitHub stars](https://img.shields.io/github/stars/MarvinJWendt/run-node-formatter?style=flat-square)](https://github.com/MarvinJWendt/run-node-formatter/stargazers)
+
 > Automatically formats your code!
 
 ## Usage :pencil2:
