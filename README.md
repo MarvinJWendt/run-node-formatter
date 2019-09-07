@@ -28,8 +28,32 @@ Simply put your code linter into a script named `lint` in your `package.json`.
 
 ## Usage :pencil2:
 
-1. Create an `lint.workflow` file in `.github/`
-2. Paste this code into the file: 
+### Option one
+
+---
+
+1. Create a `lint.yml` file in `.github/workflows/`
+2. Paste this code into the file:
+
+```yml
+on: push
+name: Node Code Linter
+jobs:
+  lint:
+    name: Node Code Linter
+    runs-on: ubuntu-latest
+    steps:
+    - uses: MarvinJWendt/node-linter@master
+```
+
+3. Commit the file
+
+### Option two
+
+---
+
+4. Create a `lint.workflow` file in `.github/`
+5. Paste this code into the file: 
    
 ```workflow
 workflow "Lint code" {
