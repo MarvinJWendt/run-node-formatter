@@ -10,8 +10,10 @@ echo "### Adding git remote..."
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 echo "### git fetch..."
 git fetch
-echo "### checkout $GITHUB_REF..."
-git checkout $GITHUB_REF
+echo "### Setting branch"
+BRANCH=$(basename $GITHUB_REF)
+echo "### Branch: $BRANCH"
+git checkout $BRANCH
 
 echo "## Login into git..."
 git config --global user.email "formatter@1337z.ninja"
@@ -41,4 +43,4 @@ git add .
 echo "## Commiting files..."
 git commit -m "Formatted code"
 echo "## Pushing"
-git push -u origin $GITHUB_REF
+git push -u origin $BRANCH
