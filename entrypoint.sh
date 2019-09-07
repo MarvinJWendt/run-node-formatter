@@ -23,14 +23,14 @@ fi
 
 echo "## Login into git..."
 git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-git config --global user.email "linter@1337z.ninja"
-git config --global user.name "Node Code Linter"
+git config --global user.email "formatter@1337z.ninja"
+git config --global user.name "Node Code Formatter"
 
 echo "## Deleting node_modules..."
 rm -rf node_modules/
 echo "## Staging changes..."
 git add .
 echo "## Commiting files..."
-git commit -m "Linted code"
+git commit -m "Formatted code"
 echo "## Pushing"
 git push -u origin HEAD
