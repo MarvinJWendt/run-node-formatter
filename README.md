@@ -39,11 +39,16 @@ Simply put your code formatter into a script named `format` or `lint` in your `p
 on: push
 name: Node Code Formatter
 jobs:
-  format:
+  lint:
     name: Node Code Formatter
     runs-on: ubuntu-latest
     steps:
-    - uses: MarvinJWendt/run-node-formatter@master
+    - uses: actions/checkout@master
+    - name: Node Code Formatter
+      uses: MarvinJWendt/run-node-formatter@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 ```
 
 3. Commit the file
@@ -56,12 +61,12 @@ jobs:
 5. Paste this code into the file: 
    
 ```workflow
-workflow "Format code" {
+workflow "Node Code Formatter" {
   resolves = ["Format"]
   on = "push"
 }
 
-action "Format" {
+action "Node Code Formatter" {
   uses = "MarvinJWendt/run-node-formatter@master"
   secrets = ["GITHUB_TOKEN"]
 }
