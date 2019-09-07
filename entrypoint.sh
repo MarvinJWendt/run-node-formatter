@@ -19,6 +19,7 @@ git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_
 git config --global user.email "linter@1337z.ninja"
 git config --global user.name "Node Code Linter"
 
-git add *
+git add .
+git reset -- node_modules
 git commit -m "Linted code"
 git push --set-upstream origin master
