@@ -6,8 +6,11 @@ REPO_FULLNAME=$(jq -r ".repository.full_name" "$GITHUB_EVENT_PATH")
 
 echo "## Initializing git repo..."
 git init
+echo "### Adding git remote..."
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
+echo "### Pull $GITHUB_REF..."
 git pull origin $GITHUB_REF
+echo "### checkout $GITHUB_REF..."
 git checkout $GITHUB_REF
 
 echo "## Login into git..."
