@@ -1,4 +1,5 @@
-#!/bin/sh -l
+#!/bin/bash
+
 npm install
 npm run lint
 git add *
