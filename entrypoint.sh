@@ -28,7 +28,7 @@ if [ -f yarn.lock ]; then
     yarn run lint
 else
     echo "## Setting environment variables..."
-    NODE_ENV=development 
+    NODE_ENV=development
     echo "## Installing dependencies..."
     npm install
     echo "## Linting code..."
