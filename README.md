@@ -13,7 +13,7 @@ Simply put your code formatter into a script named `format` or `lint` in your `p
 ```json
 ...
 "scripts": {
-    "lint": "standard --fix"
+    "format": "standard --fix"
   }
 ```
 
@@ -22,7 +22,7 @@ Simply put your code formatter into a script named `format` or `lint` in your `p
 ```json
 ...
 "scripts": {
-    "lint": "prettier"
+    "format": "prettier"
   }
 ```
 
