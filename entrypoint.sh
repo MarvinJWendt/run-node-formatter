@@ -8,6 +8,7 @@ echo "## Initializing git repo..."
 git init
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
 git pull origin $GITHUB_REF
+git checkout $GITHUB_REF
 
 echo "## Login into git..."
 git config --global user.email "formatter@1337z.ninja"
