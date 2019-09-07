@@ -21,12 +21,14 @@ git config --global user.name "Node Code Formatter"
 
 echo "## Your environment is not ready yet. Installing modules..."
 if [ -f yarn.lock ]; then
+    echo "## Detected yarn as package manager"
     yarn --non-interactive --silent --ignore-scripts --production=false
     echo "## Installing dependencies..."
     yarn install
     echo "## Linting code..."
     yarn run lint
 else
+    echo "## Detected NPM as package manager"
     echo "## Setting environment variables..."
     NODE_ENV=development
     echo "## Installing dependencies..."
@@ -42,5 +44,5 @@ echo "## Staging changes..."
 git add .
 echo "## Commiting files..."
 git commit -m "Formatted code" || true
-echo "## Pushing"
+echo "## Pushing to $BRANCH"
 git push -u origin $BRANCH
