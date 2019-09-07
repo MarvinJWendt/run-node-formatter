@@ -2,7 +2,7 @@
 
 > Automatically lints/formats your code!
 
-## Setup
+## Setup :clipboard:
 
 Simply put your code linter into a script named `lint` in your `package.json`.
 
@@ -26,7 +26,7 @@ Simply put your code linter into a script named `lint` in your `package.json`.
   }
 ```
 
-## Usage
+## Usage :octocat:
 
 1. Create an `lint.workflow` file in `.github/`
 2. Paste this code into the file: 
