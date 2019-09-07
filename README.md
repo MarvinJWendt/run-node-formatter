@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Node Code Formatter
-      uses: MarvinJWendt/run-node-formatter@master
+      uses: MarvinJWendt/run-node-formatter@1.2.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
