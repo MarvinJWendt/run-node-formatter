@@ -41,6 +41,6 @@ rm -rf node_modules/
 echo "## Staging changes..."
 git add .
 echo "## Commiting files..."
-git commit -m "Formatted code"
+git commit -m "Formatted code" || true
 echo "## Pushing"
 git push -u origin $BRANCH
