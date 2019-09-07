@@ -1,12 +1,12 @@
 # Node Code Formatter
 
-> Automatically lints/formats your code!
+> Automatically formats your code!
 
 ## Setup :clipboard:
 
-Simply put your code linter into a script named `lint` in your `package.json`.
+Simply put your code formatter into a script named `lint` or `format` in your `package.json`.
 
-**Make sure that your code linter is a dependency of your module!**
+**Make sure that your code formatter is a dependency of your module!**
 
 ### StandardJS
 
@@ -39,11 +39,11 @@ Simply put your code linter into a script named `lint` in your `package.json`.
 on: push
 name: Node Code Formatter
 jobs:
-  lint:
+  format:
     name: Node Code Formatter
     runs-on: ubuntu-latest
     steps:
-    - uses: MarvinJWendt/node-linter@master
+    - uses: MarvinJWendt/run-node-formatter@master
 ```
 
 3. Commit the file
@@ -56,13 +56,13 @@ jobs:
 5. Paste this code into the file: 
    
 ```workflow
-workflow "Lint code" {
-  resolves = ["Lint"]
+workflow "Format code" {
+  resolves = ["Format"]
   on = "push"
 }
 
-action "Lint" {
-  uses = "MarvinJWendt/node-linter@master"
+action "Format" {
+  uses = "MarvinJWendt/run-node-formatter@master"
   secrets = ["GITHUB_TOKEN"]
 }
 ```

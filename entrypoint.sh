@@ -17,7 +17,8 @@ else
     echo "## Installing dependencies..."
     npm install
     echo "## Linting code..."
-    npm run lint
+    npm run lint --if-present
+    npm run format --if-present
 fi
 
 echo "## Login into git..."
