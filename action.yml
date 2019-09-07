@@ -1,6 +1,7 @@
 name: 'Node Code Linter'
 description: 'Automatically lints your code'
 author: 'MarvinJWendt'
+icon: award
 runs:
   using: 'docker'
   image: 'Dockerfile'
