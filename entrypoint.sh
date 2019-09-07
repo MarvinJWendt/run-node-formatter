@@ -8,8 +8,8 @@ echo "## Initializing git repo..."
 git init
 echo "### Adding git remote..."
 git remote add origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPO_FULLNAME.git
-echo "### Pull $GITHUB_REF..."
-git pull origin $GITHUB_REF
+echo "### git fetch..."
+git fetch
 echo "### checkout $GITHUB_REF..."
 git checkout $GITHUB_REF
 
