@@ -7,6 +7,12 @@
 
 > Automatically formats your code!
 
+## Automatically format pull requests
+
+_Never tell your users to format their code, as we do it on the fly!_
+
+![image](https://user-images.githubusercontent.com/31022056/64829627-6457d300-d5cd-11e9-9bc0-6a35d095ec64.png)
+
 ## Usage :pencil2:
 
 1. Create a `formatter.yml` file in `.github/workflows/`
