@@ -30,7 +30,7 @@ jobs:
 
 ## Setup formatter scripts :clipboard:
 
-Simply put your code formatter into a script named `format` or `lint` in your `package.json` (Yarn only supports a `format` script at the moment).
+Simply put your code formatter into a script named `format` or `lint` in your `package.json` (Yarn only supports a `lint` script at the moment).
 
 **Make sure that your code formatter is a dependency of your module!**
 
