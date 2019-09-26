@@ -12,7 +12,7 @@ echo "### git fetch..."
 git fetch
 echo "### Setting branch"
 BRANCH=$(basename $GITHUB_REF)
-echo "### Branch: $BRANCH"
+echo "### Branch: $BRANCH (ref: $GITHUB_REF )"
 git checkout $BRANCH
 
 echo "## Login into git..."
