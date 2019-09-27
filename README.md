@@ -15,6 +15,8 @@ _Never tell your users to format their code, as we do it on the fly!_
 
 ## Usage :pencil2:
 
+**For a more detailed installation guide look into our [wiki](https://github.com/MarvinJWendt/run-node-formatter/wiki)**
+
 1. Create a `formatter.yml` file in `.github/workflows/`
 2. Paste this code into the file:
 
