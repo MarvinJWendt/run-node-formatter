@@ -54,6 +54,6 @@ Simply put your code formatter into a script named `format` or `lint` in your `p
 ```json
 ...
 "scripts": {
-    "format": "prettier"
+    "format": "prettier --write"
   }
 ```
