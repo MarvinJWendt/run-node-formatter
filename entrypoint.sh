@@ -19,6 +19,9 @@ echo "## Login into git..."
 git config --global user.email "formatter@1337z.ninja"
 git config --global user.name "Node Code Formatter"
 
+echo "## Ignore workflow files (we may not touch them)"
+git update-index --assume-unchanged .github/workflows/*
+
 echo "## Your environment is not ready yet. Installing modules..."
 if [ -f yarn.lock ]; then
     echo "## Detected yarn as package manager"
