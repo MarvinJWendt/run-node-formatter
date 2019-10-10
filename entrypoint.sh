@@ -35,10 +35,11 @@ else
     echo "## Setting environment variables..."
     NODE_ENV=development
     echo "## Installing dependencies..."
-    npm install
+    npm ci
+    echo "## Formatting code..."
+    npm run format --if-present
     echo "## Linting code..."
     npm run lint --if-present
-    npm run format --if-present
 fi
 
 echo "## Deleting node_modules..."
