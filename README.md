@@ -36,6 +36,15 @@ jobs:
 
 3. Commit the file :twisted_rightwards_arrows:
 
+## Features :sparkles:
+
+1. First runs your `format` script, then runs your `lint` script.
+2. Works on: 
+   1. New commit
+   2. Internal branches
+   3. Internal pull requests
+3. Report errors
+
 ## Setup formatter scripts :clipboard:
 
 Simply put your code formatter into a script named `format` or `lint` in your `package.json` (Yarn only supports a `lint` script at the moment).
