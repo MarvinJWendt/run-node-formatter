@@ -1,4 +1,4 @@
-# Node Code Formatter
+# Node-Code-Formatter
 
 [![GitHub Action](https://img.shields.io/badge/-GitHub_Action-black?logo=github&style=flat-square)](https://github.com/marketplace/actions/node-code-formatter)
 [![GitHub license](https://img.shields.io/github/license/MarvinJWendt/run-node-formatter?style=flat-square)](https://github.com/MarvinJWendt/run-node-formatter/blob/master/LICENSE)
