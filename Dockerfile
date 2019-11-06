@@ -6,7 +6,7 @@ COPY LICENSE README.md /
 COPY entrypoint.sh /entrypoint.sh
 
 # Install some packages
-RUN apk add jq bash git npm
+RUN apk add jq bash git npm yarn
 
 # Start action
 ENTRYPOINT ["/entrypoint.sh"]
