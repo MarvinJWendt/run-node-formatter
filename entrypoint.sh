@@ -25,7 +25,8 @@ git update-index --assume-unchanged .github/workflows/*
 echo "## Your environment is not ready yet. Installing modules..."
 if [ -f yarn.lock ]; then
     echo "## Detected yarn as package manager"
-    yarn --non-interactive --silent --ignore-scripts --production=false
+    yarn --non-interactive --silent --ignore-scripts --ignore-engines --production=false
+    yarn config set ignore-engines true
     echo "## Installing dependencies..."
     yarn install
     echo "## Linting code..."
